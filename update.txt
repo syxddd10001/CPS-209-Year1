@@ -5,7 +5,7 @@
 
 
 #this line was added in terminal on Kali Linux
-#this was file was committed using qterminal and editted using Nano 
+#this file was committed using qterminal and editted using Nano 
 #editor
 
 #this line was added using github editor
