@@ -1,0 +1,30 @@
+#sudo chmod 777 file -- gives permision to read write
+#./ -- opens a file on terminal
+#sudo apt install application -- isntalls the application
+#tar -xf file.tar.xz
+
+#cd
+#ls 
+#mkdir
+
+#sudo domainname -b name
+#domainname -a -- alias name
+#domainname -A -- all aliases
+#domainname -I --all ips in the domain
+#domainname -i --local host ip
+
+#java
+#sudo apt install default-jdk
+#java -version
+#sudo apt-get install openjdk-num-jdk
+
+#compile and run java
+#javac program.java
+#java filename
+
+
+#github commands 
+#git add .
+#git commit -a  ---- "commit message"
+#git commit -m filename
+#git push origin branchname
