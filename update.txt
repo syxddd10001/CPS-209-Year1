@@ -1,4 +1,12 @@
-this is a repository for my first year Java Course
+#this is a repository for my first year Java Course
 
-Course name: cps209
-Language: Java
+#Course name: cps209
+#Language: Java
+
+
+#this line was added in terminal on Kali Linux
+#this was file was committed using qterminal and editted using Nano 
+#editor
+
+
+
