@@ -11,3 +11,13 @@
 #this line was added using github editor
 #ok both ends work
 
+
+
+
+
+#packages for kali
+#alacarte
+#java
+#palemoon
+#intellij
+
