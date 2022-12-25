@@ -28,3 +28,5 @@
 #git commit -a  ---- "commit message"
 #git commit -m filename
 #git push origin branchname
+
+#df -h  ---- shows storage details
