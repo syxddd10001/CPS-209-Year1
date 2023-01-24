@@ -26,7 +26,7 @@ public class StringReplace
 	townEncoding = town.replace("i","!");
 	townEncoding= townEncoding.replace("s","$");
 	sentenceEncoding = sentence.replace("i","!");
-	sentenceEncoding = sentence.replace("s","$");
+	sentenceEncoding = sentenceEncoding.replace("s","$");
 		
 
 

@@ -44,37 +44,18 @@ public class TaxRefund
 	{
 		if (income > 30000f && income <= 40000f && ch > 0)
 		{
-			return 1000.0 * ch;
-		
+			return 1000.0 * ch;		
 		}
-
 		else if (income > 20000f && income <= 30000f && ch > 0)
 		{
 			return 1500.0 * ch;
-			
 		}
-
 		else if (income <= 20000f && ch > 0)
 		{
 			return 2000.0 * ch;
-		
 		}
-
 		return 0f;
-	
 	}	
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    
    
    

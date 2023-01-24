@@ -35,6 +35,11 @@ public class VowelFrequency
 
 		//-----------Start below here. To do: approximate lines of code = 12
 		// Write a for loop that counts from 0 to the length-1 of the string variable sentence (see above)
+				// Inside the loop use the charAt() method of the String class and check if the current character of the sentence is a
+		// one of 'a' 'e' 'i' 'o' 'u'. 
+		// If it is, increment the appropriate count variable by 1
+		// Hints: use sentence.length() to determine the length of the sentence string. Use sentence.charAt(i) to get the ith character in the string.
+        // Keep in mind that the char variable type is a primitive type - it is not a string!. 	So compare a char variable to constant characters like 'e' not "e"			
 		for (int i = 0; i<sentence.length(); i++)
 		{
 			if (sentence.charAt(i) == 'a')
@@ -68,13 +73,7 @@ public class VowelFrequency
 				uCount ++;
 			}
 		}
-		// Inside the loop use the charAt() method of the String class and check if the current character of the sentence is a
-		// one of 'a' 'e' 'i' 'o' 'u'. 
-		// If it is, increment the appropriate count variable by 1
-		// Hints: use sentence.length() to determine the length of the sentence string. Use sentence.charAt(i) to get the ith character in the string.
-        // Keep in mind that the char variable type is a primitive type - it is not a string!. 	So compare a char variable to constant characters like 'e' not "e"		
-		
-		
+
 		
 		
 		
