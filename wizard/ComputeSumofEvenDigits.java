@@ -27,8 +27,7 @@ public class ComputeSumofEvenDigits
 			// Finally, divide the num by 10 to "throw away" the current digit
 			
 			while (num>0)
-			{
-				
+			{	
 				digit = num % 10; 
 				if (digit%2==0)
 				{
