@@ -28,14 +28,14 @@ public class ComputeSumofEvenDigits
 			
 			while (num>0)
 			{
-				digit = num%2;
-				if (digit%2=0)
+				
+				digit = num % 10; 
+				if (digit%2==0)
 				{
 					sum+=digit;
 				}
-
+				num /=10;
 			}
-			num /= 10;
 				// Only add digit if it is even (hint: use modulo 2)
 			
 			
