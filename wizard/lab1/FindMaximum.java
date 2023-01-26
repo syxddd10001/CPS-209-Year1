@@ -39,11 +39,7 @@ public class FindMaximum
 
 		}	
 
-		
-		
-		
-		
-		
+			
 		
 		//-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
 		System.out.println("The maximum value was: " + max);

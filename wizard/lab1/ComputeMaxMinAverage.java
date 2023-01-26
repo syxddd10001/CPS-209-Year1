@@ -28,39 +28,26 @@ public class ComputeMaxMinAverage
 		
 		while (in.hasNextDouble())
 		{
-			double temp = in.nextDouble();
-			// 0  [1,2,3,4,5,6] 10000
-			if (temp < min)
+			double temp = in.nextDouble(); 
+			
+			if (temp<min)
 			{
-				 min = temp;
-				 sum += temp + max;
-			}
-
-			else if (temp > max)
-			{
-				max = temp;
-				sum += temp + min;
+				min = temp;
 				
 			}
-
 			
+			if (temp>max)
+			{
+				max = temp;
+				
+			}
+			sum+=temp;
 			count ++;
-
-
 		}	
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+				
 		
 		//-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
 		System.out.printf("The average of the values is: %.2f%n", sum/count);
