@@ -23,24 +23,29 @@ public class ConsecutiveVowels
 			// if it is, record (in a variable) the index where this occurred
 			// if another vowel is encountered, check to see if this new index is one more than the stored index (eg. index 3 then index 4 or index 7 then index 8)
 			// if so, print the word. If not, update the index 
-			int index;
-			for (int i = 0; i < word.length()-1; i++)
+			boolean ind = false;
+			for (char ch : word.toCharArray())
 			{
-				if (word.charAt(i) == 'a' || word.charAt(i) == 'e'|| word.charAt(i) == 'i' ||word.charAt(i) == 'o' || word.charAt(i) == 'u')
+				if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
 				{
-					index = i;
-					if (word.charAt(i+1) == 'a' || word.charAt(i+1) == 'e'|| word.charAt(i+1) == 'i' ||word.charAt(i+1) == 'o' || word.charAt(i+1) == 'u')
+					if (ind == true)
 					{
-				
-					System.out.println(word);
-					break;
+						System.out.println(word);	
+						break;				
 					}
+					ind = true;
 				}
-				
+			
+				else
+				{
+					ind = false;
+				}
+
+
 				
 
-			
-			}	
+			}
+
 			
 			
 				// Check each letter of word to see if a vowel, 
