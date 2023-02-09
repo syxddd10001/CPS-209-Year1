@@ -77,7 +77,7 @@ public class Averager2D
 		double average = 0d;
 		double total = 0d;
 		int counter = 0;
-
+		// did changes
 		for (int i = 0; i < aa.length; ++i)
 		{
 			for (int j = 0; j < aa[i].length; ++j)
