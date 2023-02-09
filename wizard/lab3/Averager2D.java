@@ -29,7 +29,7 @@ public class Averager2D
 		System.out.println("Average = 510.56") ;
 		System.out.printf("Average of evens = %.2f\n", averageEvens(a)) ;
 		System.out.println("EXPECTED:") ;
-		System.out.println("Average of evens = 557.89") ;
+		System.out.println("Average of evens = 557.89");
 	}
 	/**
      Find the average of all counter of a two-dimensional array
@@ -39,28 +39,28 @@ public class Averager2D
 	public static double average(int[][] aa)
 	{
 		//-----------Start below here. To do: approximate lines of code = 5
-		// 1. declare and initialize variable total to zero ; Hint: use a double 
-		double total = 0f;
-		int counter = aa[0].length * aa.length; 
-		
-		
-		//2. use a nested for loop to visit each element ; 
+		// 1. declare and initialize variable total to zero ; Hint: use a double
+		double total = 0d;
+		int counter = aa[0].length * aa.length;
+
+
+		//2. use a nested for loop to visit each element ;
 		for (int i = 0; i < aa.length; ++i)
 		{
 			for (int j = 0; j < aa[i].length; ++j)
 			{
 				total += aa[i][j];
-				
+
 			}
-			
+
 		}
-		
+
 		double average = total / ((double) (counter));
-		
-				//3. increase total with each element ; 
-		
-		
-		
+
+				//3. increase total with each element ;
+
+
+
 		//4. return the average
 		return average;
 		//-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
@@ -74,44 +74,31 @@ public class Averager2D
 	{
 		//-----------Start below here. To do: approximate lines of code = 8
 		// fill in the method
-		double evenAverage = 0f;
-		double total = 0f;
-		int elements = (aa[0].length * aa.length); 
+		double average = 0d;
+		double total = 0d;
 		int counter = 0;
-		
-		//2. use a nested for loop to visit each element ; 
+
 		for (int i = 0; i < aa.length; ++i)
 		{
 			for (int j = 0; j < aa[i].length; ++j)
 			{
-				if (j%2 == 0)
+				if (aa[i][j]%2 == 0)
 				{
-					total+=aa[i][j];
-					
+					total += aa[i][j];
+					counter ++;
 				}
 				
 			}
-			++counter;
-			
+
 		}
 		
-		evenAverage = total / ((double) (counter));
-		
-				//3. increase total with each element ; 
-		
-		
-		
-		//4. return the average
-		return evenAverage;
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		average = total/(counter);
+
+
+
+		return average;
+
+
 		//-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
 	}
 }
