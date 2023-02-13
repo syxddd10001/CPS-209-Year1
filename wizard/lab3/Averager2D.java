@@ -85,7 +85,7 @@ public class Averager2D
 				if (aa[i][j]%2 == 0)
 				{
 					total += aa[i][j];
-					counter ++;
+					++counter;
 				}
 				
 			}

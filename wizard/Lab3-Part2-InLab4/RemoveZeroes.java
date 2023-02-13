@@ -50,7 +50,7 @@ public class RemoveZeroes
 		
 		ArrayList <Integer> newArray = new ArrayList <Integer>();
 		
-		for (int i = 0; i < p.size(); i++)
+		for (int i = 0; i < p.size(); ++i)
 		{
 			if (!(p.get(i).equals(0)))
 			{
