@@ -70,10 +70,7 @@ public class Person
    
    public boolean equals(Person other)
    {
-      if (firstName.equals(other.firstName) && familyName.equals(other.familyName))
-         return true;
-      
-      return false;
+      return firstName.equals(other.firstName) && familyName.equals(other.familyName);     
    }
    
    
