@@ -20,7 +20,7 @@ public class MonthlyAppointment extends Appointment
       //-----------Start below here. To do: approximate lines of code = 1
       // Initialize the inherited variables - make use of the super() keyword
       // with proper parameters
-      
+      super(year,month,day,description);
       //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
    }
 
@@ -47,11 +47,19 @@ public class MonthlyAppointment extends Appointment
       // Override the occursOn() method. Check to see if the appointment occurs on the
       // same day of the month and is later than the appointment date stored in this object . 
       
-      
-      
-      
-      
-      
+      if (getYear() > year) 
+         return false;
+   
+
+      if (getMonth() > month)
+         return false;
+   
+
+      if (getDay() > day)
+         return false;
+ 
+   
+      return true;
       
       
       

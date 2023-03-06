@@ -21,7 +21,7 @@ public class DailyAppointment extends Appointment
    {
   	 //-----------Start below here. To do: approximate lines of code = 1
   	 // Initialize the inherited variables - make use of the super() keyword
-  	 
+  	   super(year,month,day,description);
   	 //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
    }
 
@@ -45,21 +45,20 @@ public class DailyAppointment extends Appointment
   	  // Override occursOn. Checks the given date parameters year, month, day to see if it is a later
   	  // date than the appointment date stored in this object. Return true if so, false otherwise
   	  
+         if (getYear() > year) 
+            return false;
+         
+
+         if (getMonth() > month)
+            return false;
+         
+
+         if (getDay() > day)
+            return false;
   	  
-  	  
-  	  
-  	  
-  	  
-  	  
-  	  
-  	  
-  	  
-  	  
-  	  
-  	  
-  	  
-  	  
-  	  
+         
+         return true;
+ 
   	  
   	  
   	  
