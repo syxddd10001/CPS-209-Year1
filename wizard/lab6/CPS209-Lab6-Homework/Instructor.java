@@ -35,7 +35,7 @@ public class Instructor extends SchoolPerson
  	  // containing the values of the inherited variables followed by
  	  // " Salary: " followed by salary. Hint: make use of super. 
       
-      SchoolPerson.toString();
+      return super.toString() + " Salary: " + salary; 
   	//-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
    }
 }

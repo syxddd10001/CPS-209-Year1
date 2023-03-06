@@ -28,9 +28,10 @@ public class SchoolPersonTester
 		
 		for (SchoolPerson person : people)
 		{
-			if (person.getBirthYear() > byear)
+			if (person.getBirthYear() < byear)
 			{
-				schlperson = person;
+				byear = person.getBirthYear();
+				schlperson = person;				
 			}
 		}		
 		

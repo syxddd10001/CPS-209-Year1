@@ -35,7 +35,7 @@ public class Student extends SchoolPerson
   	  // override the method toString() and return a string
   	  // containing the values of the inherited variables followed by
   	  // " Major: " followed by major. Hint: make use of super.  
-  	  return " Major: " + major;
+  	  return super.toString() + " Major: " + major;
   	  //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
    }
 }
