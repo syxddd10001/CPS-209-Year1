@@ -16,10 +16,11 @@ public class Computer extends ElectronicsProduct
     {
         //-----------Start below here. To do: approximate lines of code = 4
         //
-        
-        
-        
-        
+        super(name);
+        this.screenSize = screenSize;
+        this.ramGB = ramGB;
+        this.hdGB = hdGB; 
+     
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
     }
 
@@ -31,6 +32,11 @@ public class Computer extends ElectronicsProduct
         // See the ElectronicsProduct constructor of this type for an example
         // You can use super to copy the values in ElectronicsProduct
         
+        super(computer.getModelName());
+        this.screenSize = computer.screenSize;
+        this.ramGB = computer.ramGB;
+        this.hdGB = computer.hdGB; 
+     
         
         
         
@@ -42,7 +48,7 @@ public class Computer extends ElectronicsProduct
         //-----------Start below here. To do: approximate lines of code = 2
         //
         // Remember to use super to get toString for needed parts
-        
+        return ("Model: " + super.getModelName() + ", Stock: " +  super.getStock()+ ", Screen Size: " + screenSize + ", RAM: " + ramGB + ", hdSpace: " + hdGB);
         
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
     }
@@ -53,6 +59,9 @@ public class Computer extends ElectronicsProduct
         //
         // Use super.equals to compare parts in ElectronicsProduct
         
+        Computer otherComp = (Computer) other;
+        
+        return (super.equals(this) == super.equals(otherComp));
         
         
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.

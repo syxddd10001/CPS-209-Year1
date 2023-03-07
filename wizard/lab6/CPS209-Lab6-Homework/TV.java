@@ -1,3 +1,5 @@
+import javax.script.ScriptEngineManager;
+
 /**
  * A class for TVs. You should complete the following:
  *
@@ -20,7 +22,9 @@ public class TV extends ElectronicsProduct
     {
         //-----------Start below here. To do: approximate lines of code = 3
         //
-        
+        super(name);
+        this.type = type;
+        this.screenSize = screenSize;
         
         
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
@@ -33,7 +37,9 @@ public class TV extends ElectronicsProduct
         // Remember to copy all values from the given TV.
         // See the ElectronicsProduct constructor of this type for an example
         // You can use super to copy the values in ElectronicsProduct
-        
+        super(tv.getModelName());
+        this.type = tv.type;
+        this.screenSize = tv.screenSize;
         
         
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
@@ -44,7 +50,7 @@ public class TV extends ElectronicsProduct
         //-----------Start below here. To do: approximate lines of code = 1
         //
         // Remember to use super to get toString for needed parts
-        
+        return "Model: " + super.getModelName() + ", Stock: " + super.getStock() + ", Type: " + type + ", Screen Size: " + screenSize;
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
     }
 
@@ -53,7 +59,9 @@ public class TV extends ElectronicsProduct
         //-----------Start below here. To do: approximate lines of code = 2
         //
         // Use super.equals to compare parts in ElectronicsProduct
-        
+        TV otherTV = (TV) other;
+
+        return (super.equals(this)  ==  super.equals(otherTV));
         
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
     }
