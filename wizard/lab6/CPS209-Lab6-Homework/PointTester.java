@@ -89,8 +89,11 @@ public class PointTester
         
         for (Point P : points)
         {
-            if (!newPoints.contains(P))
-            newPoints.add(P);
+            
+            if (!(newPoints.contains(P)))
+            {
+                newPoints.add(P);
+            }      
         } 
         
         return newPoints;

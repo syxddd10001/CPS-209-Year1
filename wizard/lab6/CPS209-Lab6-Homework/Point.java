@@ -27,13 +27,16 @@ public class Point
     }
 
     // Should check that the x and y coordinates are equal
+    
     public boolean equals(Object other)
     {
         //-----------Start below here. To do: approximate lines of code = 2
-        //
-        if (x_coord == other.x_coord && y_coord == other.y_coord) return true;
-        
-        return false;
+        //    
+        Point otherPoint = (Point) other;
+
+        return x_coord == otherPoint.x_coord && y_coord == otherPoint.y_coord;
+
+
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
     }
 
