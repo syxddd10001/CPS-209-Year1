@@ -37,7 +37,7 @@ public class TV extends ElectronicsProduct
         // Remember to copy all values from the given TV.
         // See the ElectronicsProduct constructor of this type for an example
         // You can use super to copy the values in ElectronicsProduct
-        super(tv.getModelName());
+        super(tv);
         this.type = tv.type;
         this.screenSize = tv.screenSize;
         
