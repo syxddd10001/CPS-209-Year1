@@ -61,7 +61,7 @@ public class Computer extends ElectronicsProduct
         
         Computer otherComp = (Computer) other;
         
-        return (super.equals(this) == super.equals(otherComp));
+        return super.equals(otherComp) && this.screenSize == otherComp.screenSize && this.ramGB == otherComp.ramGB && this.hdGB == otherComp.hdGB;
         
         
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.

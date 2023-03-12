@@ -61,7 +61,7 @@ public class TV extends ElectronicsProduct
         // Use super.equals to compare parts in ElectronicsProduct
         TV otherTV = (TV) other;
 
-        return (super.equals(this)  ==  super.equals(otherTV));
+        return super.equals(otherTV) && this.type == otherTV.type && this.screenSize == otherTV.screenSize;
         
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
     }

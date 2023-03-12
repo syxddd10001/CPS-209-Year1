@@ -45,7 +45,6 @@ public class C extends B
 
         //-----------Start below here. To do: approximate lines of code = 4
         //
-        A a = new A();
         super.methodA2(v+25);
         
         
