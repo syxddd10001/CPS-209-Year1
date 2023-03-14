@@ -82,7 +82,7 @@ public class ElectronicsStore
         // element in arrayList and returns its index. If it isn't there, it returns -1
         // Note, that indexOf uses equals, so that must be implemented correctly
         
-       int j = tvs.indexOf(tv);
+        int j = tvs.indexOf(tv);
 
         if (j==-1){
             tvs.add(new TV(tv));
