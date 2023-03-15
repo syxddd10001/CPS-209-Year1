@@ -7,11 +7,11 @@ import java.util.Comparator;
  */
 public class Library
 {
-	private ArrayList<Song> 			songs; 
-	private ArrayList<AudioBook> 	audiobooks;
-	private ArrayList<Playlist> 	playlists; 
+	private ArrayList<Song> songs; 
+	private ArrayList<AudioBook> audiobooks;
+	private ArrayList<Playlist> playlists; 
 	
-  //private ArrayList<Podcast> 	podcasts;
+  	private ArrayList<Podcast> podcasts;
 	
 	// Public methods in this class set errorMesg string 
 	// Error Messages can be retrieved from main in class MyAudioUI by calling  getErrorMessage()
@@ -25,10 +25,10 @@ public class Library
 
 	public Library()
 	{
-		songs 			= new ArrayList<Song>(); 
-		audiobooks 	= new ArrayList<AudioBook>(); ;
-		playlists   = new ArrayList<Playlist>();
-	  //podcasts		= new ArrayList<Podcast>(); ;
+		songs = new ArrayList<Song>(); 
+		audiobooks = new ArrayList<AudioBook>(); ;
+		playlists = new ArrayList<Playlist>();
+	  	podcasts = new ArrayList<Podcast>(); ;
 	}
 	/*
 	 * Download audio content from the store. Since we have decided (design decision) to keep 3 separate lists in our library
@@ -60,20 +60,37 @@ public class Library
 	// Print Information (printInfo()) about all audiobooks in the array list
 	public void listAllAudioBooks()
 	{
-		
+		for (int i = 0; i < audiobooks.size(); i++)
+		{
+			int index = i + 1;
+			System.out.println("" + index + ". ");
+			audiobooks.get(i).printInfo();
+			System.out.println();	
+		}
 	}
 	
   // Print Information (printInfo()) about all podcasts in the array list
 	public void listAllPodcasts()
 	{
-		
+		for (int i = 0; i < podcasts.size(); i++)
+		{
+			int index = i + 1;
+			System.out.println("" + index + ". ");
+			playlists.get(i).printInfo();
+		}
 	}
 	
   // Print the name of all playlists in the playlists array list
 	// First print the index number as in listAllSongs() above
 	public void listAllPlaylists()
 	{
-		
+		for (int i = 0; i < playlists.size(); i++)
+		{
+			int index = i + 1;
+			System.out.print("" + index + ". ");
+			songs.get(i).printInfo();
+			System.out.println();	
+		}
 	}
 	
   // Print the name of all artists. 
@@ -82,6 +99,14 @@ public class Library
 		// First create a new (empty) array list of string 
 		// Go through the songs array list and add the artist name to the new arraylist only if it is
 		// not already there. Once the artist arrayl ist is complete, print the artists names
+
+		ArrayList <String> artists = new ArrayList<String>();
+
+		for (Song s : songs)
+		{
+			artists.add(s.getArtist());
+		}
+
 		
 	}
 
@@ -95,7 +120,8 @@ public class Library
   //Sort songs in library by year
 	public void sortSongsByYear()
 	{
-		// Use Collections.sort() 
+		// Use Collections.sort()
+		
 	
 	}
   // Write a class SongYearComparator that implements

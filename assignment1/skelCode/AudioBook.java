@@ -20,7 +20,14 @@ public class AudioBook extends AudioContent
 									String author, String narrator, ArrayList<String> chapterTitles, ArrayList<String> chapters)
 	{
 		// Make use of the constructor in the super class AudioContent. 
-		// Initialize additional AudioBook instance variables. 
+		// Initialize additional AudioBook instance variables.
+		
+		super(title,year,id,type,audioFile,length);
+		this.author = author;
+		this.narrator = narrator;
+		chapterTitles = new ArrayList<String>();
+		chapters = new ArrayList<String>();
+
 	}
 	
 	public String getType()
@@ -33,7 +40,8 @@ public class AudioBook extends AudioContent
 	// see the video
 	public void printInfo()
 	{
-		
+		super.printInfo();
+		System.out.println("Author: " + author + " Narrator: " + narrator);
 	}
 	
   // Play the audiobook by setting the audioFile to the current chapter title (from chapterTitles array list) 
