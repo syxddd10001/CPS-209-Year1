@@ -16,8 +16,8 @@ public class ElectronicsStore
     {
         //-----------Start below here. To do: approximate lines of code = 2
         //
-        this.computers = new ArrayList<Computer>();
-        this.tvs = new ArrayList<TV>();
+        computers = new ArrayList<Computer>();
+        tvs = new ArrayList<TV>();
         
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
     }
@@ -53,9 +53,9 @@ public class ElectronicsStore
         // element in arrayList and returns its index. If it isn't there, it returns -1
         // Note, that indexOf uses equals, so that must be implemented correctly
         
-        if (!computers.contains(computer)) computers.add(computer);
+        
 
-        else computers.get(computers.indexOf(computer)).addStock(1);
+        
         
 
 
