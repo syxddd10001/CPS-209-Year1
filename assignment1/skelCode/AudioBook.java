@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+//Name: Syed Iltefat
+//ID: 501113045
+
 /*
  * An AudioBook is a type of AudioContent.
  * It is a recording made available on the internet of a book being read aloud by a narrator
@@ -20,7 +23,14 @@ public class AudioBook extends AudioContent
 									String author, String narrator, ArrayList<String> chapterTitles, ArrayList<String> chapters)
 	{
 		// Make use of the constructor in the super class AudioContent. 
-		// Initialize additional AudioBook instance variables. 
+		// Initialize additional AudioBook instance variables.
+		
+		super(title,year,id,type,audioFile,length);
+		this.author = author;
+		this.narrator = narrator;
+		this.chapterTitles = chapterTitles;
+		this.chapters = chapters ;
+
 	}
 	
 	public String getType()
@@ -33,7 +43,8 @@ public class AudioBook extends AudioContent
 	// see the video
 	public void printInfo()
 	{
-		
+		super.printInfo();
+		System.out.println("Author: " + author + " Narrator: " + narrator);
 	}
 	
   // Play the audiobook by setting the audioFile to the current chapter title (from chapterTitles array list) 
@@ -41,14 +52,19 @@ public class AudioBook extends AudioContent
 	// Then make use of the the play() method of the superclass
 	public void play()
 	{
-		
+		super.setAudioFile(chapterTitles.get(currentChapter)); // setting the audio file to the title of the current chapter
+		super.setAudioFile(chapters.get(currentChapter)); // then the chapter
+		super.play(); // playing the file
 	}
 	
 	// Print the table of contents of the book - i.e. the list of chapter titles
 	// See the video
 	public void printTOC()
 	{
-		
+		for (int i = 0; i<chapterTitles.size();i++) //iterating through our chapters of the audio book and printing it in the correct format
+		{
+			System.out.println("Chapter: " + (i+1) + ". " + chapterTitles.get(i) + "\n");
+		}
 	}
 
 	// Select a specific chapter to play - nothing to do here
@@ -63,7 +79,9 @@ public class AudioBook extends AudioContent
 	//Two AudioBooks are equal if their AudioContent information is equal and both the author and narrators are equal
 	public boolean equals(Object other)
 	{
-		return false;
+		AudioBook otherAC = (AudioBook) other;
+
+		return super.equals(otherAC) && author.equals(otherAC.getAuthor()) && narrator.equals(otherAC.getNarrator());
 	}
 	
 	public int getNumberOfChapters()

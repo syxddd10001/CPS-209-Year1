@@ -32,7 +32,7 @@ public class Computer extends ElectronicsProduct
         // See the ElectronicsProduct constructor of this type for an example
         // You can use super to copy the values in ElectronicsProduct
         
-        super(computer.getModelName());
+        super(computer);
         this.screenSize = computer.screenSize;
         this.ramGB = computer.ramGB;
         this.hdGB = computer.hdGB; 
@@ -61,7 +61,7 @@ public class Computer extends ElectronicsProduct
         
         Computer otherComp = (Computer) other;
         
-        return (super.equals(other));
+        return super.equals(otherComp) && this.screenSize == otherComp.screenSize && this.ramGB == otherComp.ramGB && this.hdGB == otherComp.hdGB;
         
         
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.

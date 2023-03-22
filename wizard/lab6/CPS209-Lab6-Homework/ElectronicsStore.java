@@ -53,15 +53,18 @@ public class ElectronicsStore
         // element in arrayList and returns its index. If it isn't there, it returns -1
         // Note, that indexOf uses equals, so that must be implemented correctly
         
-        
+       
+        int i = computers.indexOf(computer);
 
-        
-        
+        if (i == -1){
+            computers.add(new Computer(computer));
+        }
 
-
+        else{
+            computers.get(i).addStock(computer.getStock());      
+        }
         
-        
-        
+       
         
         
         
@@ -79,10 +82,15 @@ public class ElectronicsStore
         // element in arrayList and returns its index. If it isn't there, it returns -1
         // Note, that indexOf uses equals, so that must be implemented correctly
         
-        if (!tvs.contains(tv)) tvs.add(tv);
+        int j = tvs.indexOf(tv);
 
-        else tvs.get(tvs.indexOf(tv)).addStock(1);;
-        
+        if (j==-1){
+            tvs.add(new TV(tv));
+        }
+
+        else{
+            tvs.get(j).addStock(tv.getStock());   
+        }
         
         
         

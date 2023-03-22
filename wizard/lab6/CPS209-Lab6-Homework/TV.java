@@ -37,7 +37,7 @@ public class TV extends ElectronicsProduct
         // Remember to copy all values from the given TV.
         // See the ElectronicsProduct constructor of this type for an example
         // You can use super to copy the values in ElectronicsProduct
-        super(tv.getModelName());
+        super(tv);
         this.type = tv.type;
         this.screenSize = tv.screenSize;
         
@@ -59,9 +59,9 @@ public class TV extends ElectronicsProduct
         //-----------Start below here. To do: approximate lines of code = 2
         //
         // Use super.equals to compare parts in ElectronicsProduct
-        
+        TV otherTV = (TV) other;
 
-        return (super.equals(other));
+        return super.equals(otherTV) && this.type == otherTV.type && this.screenSize == otherTV.screenSize;
         
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
     }
