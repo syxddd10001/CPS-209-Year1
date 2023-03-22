@@ -1,3 +1,6 @@
+//Name: Syed Iltefat
+//ID: 501113045
+
 /*
  *  Audio Content contains information common to all types of audio (e.g. songs, audiobooks etc)
  */
@@ -37,6 +40,7 @@ abstract public class AudioContent
 	// Print Information 
 	public void printInfo()
 	{
+		// formatting to output
 		System.out.println("Title: " + title + " Id: " + id + " Year: " + year + " Type: " + type + " Length: " + length);	 
 	}
 	
@@ -52,7 +56,8 @@ abstract public class AudioContent
 	public boolean equals(Object other)
 	{
 		AudioContent otherCon = (AudioContent) other;
-		return title.equals(otherCon.title) && id.equals(otherCon.id);
+		return title.equals(otherCon.title) && id.equals(otherCon.id); 
+		// if the current and the other content are equal
 	}
   
 	public String getAudioFile()

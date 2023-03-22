@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+//Name: Syed Iltefat
+//ID: 501113045
+
 /*
  * A Playlist contains an array list of AudioContent (i.e. Song, AudioBooks, Podcasts) from the library
  */
@@ -22,6 +25,7 @@ public class Playlist
 	public void setTitle(String title)
 	{
 		this.title = title;
+		
 	}
 
 	public void addContent(AudioContent content)
@@ -47,6 +51,7 @@ public class Playlist
 	 */
 	public void printContents()
 	{
+		//iterating through each elements of the contents array and printing it in the correct format
 		for (int i = 0; i<contents.size(); i++)
 		{
 			System.out.print(i+1 + ". ");
@@ -58,18 +63,21 @@ public class Playlist
 	// Play all the AudioContent in the contents list
 	public void playAll()
 	{
-		
+		// iterating through each elements on the contents array (playlsit array) and playing them
+		for (AudioContent ac : contents){
+			ac.play();
+		}
 	}
 	
 	// Play the specific AudioContent from the contents array list.
 	// First make sure the index is in the correct range. 
 	public void play(int index)
 	{
-		index -=1;
+		index -=1; // making sure the index is 1 less than the given index because our indexes start from 0
 
-		if (index>contents.size()) return;
+		if (index>contents.size() || index<1) return; // if the given index is out of the bounds of our playlist, return nothing  
 
-		contents.get(index).play();
+		contents.get(index).play(); // play the content at that index from the contents array if the index is valid
 
 	}
 	
@@ -83,7 +91,7 @@ public class Playlist
 	{
 		Playlist otherPlaylist = (Playlist) other;
 		
-		return (getTitle().equals(otherPlaylist.getTitle()));
+		return (getTitle().equals(otherPlaylist.getTitle())); // returning if our playlist is equal to the other playlist
 	}
 	
 	// Given an index of an audio content object in contents array list,
@@ -93,9 +101,9 @@ public class Playlist
 	public void deleteContent(int index)
 	{
 		
-		if (!contains(index)) return;
+		if (!contains(index)) return; // if the song index is invalid
 		
-		contents.remove(index-1);
+		contents.remove(index-1); // deleting content from our playlist if the index is valid
 	}
 	
 	

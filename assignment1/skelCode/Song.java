@@ -1,3 +1,6 @@
+//Name: Syed Iltefat
+//ID: 501113045
+
 /*
  * A Song is a type of AudioContent. A Song has extra fields such as Artist (person(s) singing the song) and composer 
  */
@@ -41,7 +44,7 @@ public class Song extends AudioContent implements Comparable<Song>// implement t
 	// Play the song by setting the audioFile to the lyrics string and then calling the play() method of the superclass
 	public void play()
 	{
-		getLyrics();
+		super.setAudioFile(getLyrics());
 		super.play();
 	}
 	
@@ -88,7 +91,7 @@ public class Song extends AudioContent implements Comparable<Song>// implement t
 	{
 		Song otherSong = (Song) other; 
 		
-		if(super.equals(otherSong))
+		if(super.equals(otherSong) && artist.equals(otherSong.getArtist()) && composer.equals(otherSong.getComposer())) //if this and the other song are equal using the audio content equals method
 			return true;
 		
 		
@@ -100,6 +103,7 @@ public class Song extends AudioContent implements Comparable<Song>// implement t
 	// This method will allow songs to be sorted alphabetically
 	public int compareTo(Song other)
 	{
-		return getTitle().compareToIgnoreCase(other.getTitle());
+		// checking if the titles of the two songs are the same
+		return getTitle().compareToIgnoreCase(other.getTitle()); 
 	} 
 }
