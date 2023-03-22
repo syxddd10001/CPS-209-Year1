@@ -35,15 +35,15 @@ abstract public class AudioContent
 	abstract public String getType();
 
 	// Print Information 
-  public void printInfo()
-  {
-    	System.out.println("Title: " + title + " Id: " + id + " Year: " + year + " Type: " + type + " Length: " + length);	 
-  }
+	public void printInfo()
+	{
+		System.out.println("Title: " + title + " Id: " + id + " Year: " + year + " Type: " + type + " Length: " + length);	 
+	}
 	
   // Play the content via the audio file
 	public void play()
 	{
-		this.printInfo();
+		printInfo();
 		// Simulate playing of the audio file. For example, for a song this would be printing the lyrics
 		System.out.println("\n" + audioFile);
 	}

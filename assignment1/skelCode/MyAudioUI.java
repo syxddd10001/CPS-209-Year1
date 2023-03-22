@@ -29,7 +29,7 @@ public class MyAudioUI
 				System.out.print("\n>");
 				continue;
 			}
-			else if (action.equalsIgnoreCase("Q") || action.equalsIgnoreCase("QUIT"))
+			else if (action.equalsIgnoreCase("q!") || action.equalsIgnoreCase("Q") || action.equalsIgnoreCase("QUIT"))
 				return;
 			
 			else if (action.equalsIgnoreCase("STORE"))	// List all songs
@@ -80,6 +80,11 @@ public class MyAudioUI
 			else if (action.equalsIgnoreCase("PLAYSONG")) 
 			{
 				// Print error message if the song doesn't exist in the library
+				System.out.print("index of the song: ");
+				int indexIN = scanner.nextInt();
+				
+				mylibrary.playSong(indexIN);
+
 			}
 			// Print the table of contents (TOC) of an audiobook that
 			// has been downloaded to the library. Get the desired book index
@@ -93,7 +98,13 @@ public class MyAudioUI
 			// number from the keyboard - see class Library
 			else if (action.equalsIgnoreCase("PLAYBOOK")) 
 			{
+				System.out.print("index of the book: ");
+				int indexIN = scanner.nextInt();
+				System.out.print("chapter of the book: ");
+				int chapterIN = scanner.nextInt();
 				
+
+				mylibrary.playAudioBook(indexIN, chapterIN);
 			}
 			// Print the episode titles for the given season of the given podcast
 			// In addition to the podcast index from the list of podcasts, 
@@ -137,6 +148,9 @@ public class MyAudioUI
 			// see class Library for the method to call
 			else if (action.equalsIgnoreCase("MAKEPL")) 
 			{
+				System.out.println("name of the playlist: ");
+				action = scanner.nextLine();
+				mylibrary.makePlaylist(action);
 				
 			}
 			// Print the content information (songs, audiobooks, podcasts) in the playlist
@@ -144,7 +158,9 @@ public class MyAudioUI
 		  // see class Library for the method to call
 			else if (action.equalsIgnoreCase("PRINTPL"))	// print playlist content
 			{
-				
+				System.out.println("name of the playlist: ");
+				action = scanner.nextLine();
+				mylibrary.printPlaylist(action);
 			}
 			// Add content (song, audiobook, podcast) from mylibrary (via index) to a playlist
 			// Read the playlist title, the type of content ("song" "audiobook" "podcast")
@@ -152,14 +168,27 @@ public class MyAudioUI
 		  // see class Library for the method to call
 			else if (action.equalsIgnoreCase("ADDTOPL")) 
 			{
-				
+				System.out.println("name of the playlist: ");
+				String namePlaylist = scanner.nextLine();
+				System.out.println("type you want to add (SONG/BOOK): ");
+				String typePlaylist = scanner.nextLine();
+				System.out.println("index of the song: ");
+				int addIndex = scanner.nextInt();
+
+				mylibrary.addContentToPlaylist(typePlaylist, addIndex, namePlaylist);
+
 			}
 			// Delete content from play list based on index from the playlist
 			// Read the playlist title string and the playlist index
 		  // see class Library for the method to call
 			else if (action.equalsIgnoreCase("DELFROMPL")) 
 			{
-				
+				System.out.println("name of the playlist: ");
+				String namePlaylist = scanner.nextLine();
+				System.out.println("index of the song or book: ");
+				int delIndex = scanner.nextInt();
+
+				mylibrary.delContentFromPlaylist(delIndex, namePlaylist);
 			}
 			
 			else if (action.equalsIgnoreCase("SORTBYYEAR")) // sort songs by year

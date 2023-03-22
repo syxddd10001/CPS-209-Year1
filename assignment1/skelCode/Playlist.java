@@ -47,7 +47,12 @@ public class Playlist
 	 */
 	public void printContents()
 	{
-		
+		for (int i = 0; i<contents.size(); i++)
+		{
+			System.out.print(i+1 + ". ");
+			contents.get(i).printInfo();
+			
+		}
 	}
 
 	// Play all the AudioContent in the contents list
@@ -60,7 +65,12 @@ public class Playlist
 	// First make sure the index is in the correct range. 
 	public void play(int index)
 	{
-		
+		index -=1;
+
+		if (index>contents.size()) return;
+
+		contents.get(index).play();
+
 	}
 	
 	public boolean contains(int index)
@@ -71,7 +81,9 @@ public class Playlist
 	// Two Playlists are equal if their titles are equal
 	public boolean equals(Object other)
 	{
-		return false;
+		Playlist otherPlaylist = (Playlist) other;
+		
+		return (getTitle().equals(otherPlaylist.getTitle()));
 	}
 	
 	// Given an index of an audio content object in contents array list,
@@ -80,7 +92,9 @@ public class Playlist
 	// The given index is 1-indexed so convert to 0-indexing before removing
 	public void deleteContent(int index)
 	{
+		
 		if (!contains(index)) return;
+		
 		contents.remove(index-1);
 	}
 	

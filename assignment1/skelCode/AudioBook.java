@@ -49,14 +49,19 @@ public class AudioBook extends AudioContent
 	// Then make use of the the play() method of the superclass
 	public void play()
 	{
-		
+		super.setAudioFile(chapterTitles.get(currentChapter));
+		super.setAudioFile(chapters.get(currentChapter));
+		super.play();
 	}
 	
 	// Print the table of contents of the book - i.e. the list of chapter titles
 	// See the video
 	public void printTOC()
 	{
-		
+		for (int i = 0; i<chapterTitles.size();i++)
+		{
+			System.out.println("Chapter: " + chapterTitles.get(i));
+		}
 	}
 
 	// Select a specific chapter to play - nothing to do here
@@ -71,7 +76,9 @@ public class AudioBook extends AudioContent
 	//Two AudioBooks are equal if their AudioContent information is equal and both the author and narrators are equal
 	public boolean equals(Object other)
 	{
-		return false;
+		AudioContent otherAC = (AudioContent) other;
+
+		return super.equals(otherAC);
 	}
 	
 	public int getNumberOfChapters()
