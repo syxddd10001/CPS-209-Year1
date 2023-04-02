@@ -48,7 +48,7 @@ public class Computer extends ElectronicsProduct
         //-----------Start below here. To do: approximate lines of code = 2
         //
         // Remember to use super to get toString for needed parts
-        return ("Model: " + super.getModelName() + ", Stock: " +  super.getStock()+ ", Screen Size: " + screenSize + ", RAM: " + ramGB + ", hdSpace: " + hdGB);
+        return (super.toString() + ", Screen Size: " + screenSize + ", RAM: " + ramGB + ", hdSpace: " + hdGB);
         
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
     }

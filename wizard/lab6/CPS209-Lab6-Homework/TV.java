@@ -50,7 +50,7 @@ public class TV extends ElectronicsProduct
         //-----------Start below here. To do: approximate lines of code = 1
         //
         // Remember to use super to get toString for needed parts
-        return "Model: " + super.getModelName() + ", Stock: " + super.getStock() + ", Type: " + type + ", Screen Size: " + screenSize;
+        return super.toString()+ ", Type: " + type + ", Screen Size: " + screenSize;
         //-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
     }
 
