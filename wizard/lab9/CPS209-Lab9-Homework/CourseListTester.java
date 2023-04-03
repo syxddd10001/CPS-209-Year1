@@ -30,16 +30,13 @@ public class CourseListTester
         //-----------Start below here. To do: approximate lines of code = 8
         //
         // Check if courseCode is in the map using .containsKey
-            if (courseMap.containsKey(courseCode)){
+        if (courseMap.containsKey(courseCode)){
                 
-                for (Map.Entry<String, ArrayList<String>>entry:courseMap.entrySet()){
-                    if (!entry.getValue().contains(studentName)){
-                        entry.getValue().add(studentName);
-                    }
+            if (!courseMap.get(courseCode).contains(studentName)){
+                courseMap.get(courseCode).add(studentName);
+            } 
 
-                }
-
-            }
+        }
         
             // if courseCode is in the map, get the list of students with that course code
             // The return value of .get will be ArrayList<String>
@@ -47,7 +44,10 @@ public class CourseListTester
         
             // Only add student if they aren't already in the list
         
-        
+        else{
+            courseMap.put(courseCode,new ArrayList<String>());
+            courseMap.get(courseCode).add(studentName);
+        }
         
         
         

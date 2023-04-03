@@ -61,8 +61,7 @@ public class WordCheck
 			if (set2.contains(s)) count++; //
 		} //
 		// calculate and return percent of words in set1 that you counted
-		System.out.println(count);
-		return (double) (count/set1.size())*100;
+		return ((double)count/set1.size())*100;
 		//-----------------End here. Please do not remove this comment. Reminder: no changes outside the todo regions.
 	}
 
